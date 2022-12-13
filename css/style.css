@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+input {
+  appearance: none;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+input::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00d";
+  width: 24px;
+  height: 24px;
+  border: 3px solid #5c5c5c;
+  color: #5c5c5c;
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:hover::before {
+  background-color: #d8d8d8;
+}
+
+input:checked::before {
+  content: "\f00c";
+  color: #971eac;
+  border-color: #971eac;
+}
+
+input:checked ~ p {
+  color: #971eac;
+}
